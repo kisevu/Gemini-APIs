@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Response</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Optional: Add your custom styles here -->
+    <style>
+        /* Add any custom styles specific to your application */
+        body {
+            padding: 20px; /* Example: Adding padding to the body */
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2 class="mt-5">Response</h2>
+    <div class="card mt-3">
+        <div class="card-body">
+            <p class="card-text">Query: <span th:text="${query}"></span></p>
+            <p class="card-text">Response: <span th:text="${response}"></span></p>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and dependencies (optional) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

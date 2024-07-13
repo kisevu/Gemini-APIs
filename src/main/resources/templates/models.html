@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Models List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="mb-4">Models List</h1>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Object</th>
+            <th>Created</th>
+            <th>Owned By</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="model : ${models}">
+            <td th:text="${model.id}">ID</td>
+            <td th:text="${model.object}">Object</td>
+            <td th:text="${#dates.format(model.created * 1000, 'yyyy-MM-dd HH:mm:ss')}">Created</td>
+            <td th:text="${model.ownedBy}">Owned By</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
